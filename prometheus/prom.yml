@@ -2,9 +2,10 @@ global:
   scrape_interval: 15s # Default scrape interval
 
 scrape_configs:
-  - job_name: 'prometheus'
+  - job_name: 'python-app'
+    metrics_path: '/metrics'
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['16.170.206.177:3568']
 
   # - job_name: 'example_api'
   #   scheme: http
